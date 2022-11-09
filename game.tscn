@@ -32,7 +32,7 @@ transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0 )
 shape = SubResource( 3 )
 
 [node name="Car" type="VehicleBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.99927, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.999, 0 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Car"]
@@ -83,7 +83,13 @@ damping_relaxation = 2.0
 [node name="carwheel" parent="Car/BackRightWheel" instance=ExtResource( 4 )]
 transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0 )
 
+[node name="carbody" parent="Car" instance=ExtResource( 3 )]
+
 [node name="Camera" type="Camera" parent="Car"]
 transform = Transform( -1, 4.17092e-08, -7.68315e-08, 0, 0.87885, 0.477097, 8.74228e-08, 0.477097, -0.87885, 0, 6.35541, -11.7795 )
 
-[node name="carbody" parent="Car" instance=ExtResource( 3 )]
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0149, 36.5489, 17.8245 )
+light_energy = 100.0
+
+[node name="Spatial" type="Spatial" parent="."]
